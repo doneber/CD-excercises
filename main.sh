@@ -49,7 +49,7 @@ case "$1" in
   ;;
   start)
     if [ -t 0 ]; then
-      echo "You need an input config file to Start a VM"
+      eval ${config[VBoxManage]} startvm $2
     else
       eval ${config[VBoxManage]} startvm ${config[vmname]}
     fi
