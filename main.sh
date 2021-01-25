@@ -77,9 +77,9 @@ case "$1" in
   ;;
   *)
       echo "usage: $0"
-      echo "        [--help]"
-      echo "        [create < fileConfig]"
-      echo "        [delete < fileConfig]"
+      echo "        [--help] [--list]"
+      echo "        [start < fileConfig] [shoutdown < fileConfig]"
+      echo "        [create < fileConfig] [delete < fileConfig]"
   ;;
 esac
 
