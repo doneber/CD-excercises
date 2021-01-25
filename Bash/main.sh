@@ -1,7 +1,7 @@
 #!/bin/bash
 typeset -A config # init array
 config=( # set default values in config array
-    [VBoxManage]="/mnt/d/Program\ Files/Oracle/VirtualBox/VBoxManage.exe"
+    [VBoxManage]="VBoxManage"
     [vmname]="vm-efe"
 )
 if [ -t 0 ]; then
@@ -45,6 +45,7 @@ case "$1" in
     exit 0
   ;;
   -l|--list)
+    echo ${config[VBoxManage]} list vms
     eval ${config[VBoxManage]} list vms
   ;;
   start)
