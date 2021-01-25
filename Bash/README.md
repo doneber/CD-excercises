@@ -1,16 +1,22 @@
-# My Virtual Machine manager
-The project manages the VirtualBox machines with vboxmanage
+# My Virtual Machine Manager
 
-## Run `bash main.sh`
-You'll should see
+## Quick Start
+Requirements:
+- [Virtualbox](https://www.virtualbox.org/wiki/Downloads)
+- Git
+
+Clone the repo:
+
 ```
-    usage: $0
-            [--help] [--list]
-            [start < fileConfig] [shoutdown < fileConfig]
-            [create < fileConfig] [delete < fileConfig]
-       These are common commands used:
-               start < fileNameConfig                    Start a VM with input config file
-            shoutdown < fileNameConfig                Shoutdown a VM with input config file
-            create < fileNameConfig                   Create a VM with input config file
-            delete < fileNameConfig                   Delete a VM with input config file
+git clone https://github.com/doneber/my-vm-manager/
+cd my-vm-manager/Bash
+```
+	
+To start you could run:
+```
+bash main.sh --help
+```
+or if you want to set some variables
+```
+bash main.sh --help < file.config
 ```
