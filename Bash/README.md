@@ -1,5 +1,5 @@
 # My Virtual Machine manager
-The project manages the VirtualBox machines
+The project manages the VirtualBox machines with vboxmanage
 
 ## Run `bash main.sh`
 You'll should see
