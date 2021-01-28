@@ -61,6 +61,10 @@ app.delete('/Comment/:CommentId', deleteComment)
 
 const PORT = 8000
 app.get('/', (req, res) => res.send('Express + TypeScript Server (ExpressTs)'))
-app.listen(PORT, () => {
-  console.log(`⚡️[server]: Server is running at localhost:${PORT}`)
-})
+
+if (require.main === module) { // true if file is executed
+  app.listen(PORT, () => {
+    console.log(`⚡️[server]: Server is running at localhost:${PORT}`)
+  })
+}
+export default app;
