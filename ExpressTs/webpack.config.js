@@ -1,4 +1,5 @@
 const path = require('path');
+const ZipPlugin = require('zip-webpack-plugin');
 
 module.exports = {
   entry: path.resolve(__dirname, 'app.ts'),
@@ -18,6 +19,12 @@ module.exports = {
       }
     ]
   },
+  plugins: [
+    new ZipPlugin({
+      path: __dirname,
+      filename: 'dist.zip',
+    }),
+  ],
   resolve: {
     extensions: ['.ts', '.js'],
   }
