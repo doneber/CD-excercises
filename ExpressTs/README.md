@@ -2,11 +2,27 @@
 [![Build Status](https://travis-ci.org/hyperbox/hyperbox.svg?branch=master)](https://travis-ci.org/hyperbox/hyperbox)
 
 This is a basic ExpressJs & Typescript API excercise
-## Requirements
-- NodeJs
-- Yarn
 ## Quick start
-Get the project
+This example project was uploaded at npm repository, so you can install:
+### Requirement
+  - NodeJs
+
+Install the package
+
+```
+npm install -g express-ts-api
+```
+And run the server:
+```
+express-ts-api
+```
+## Let's start
+
+### Requirement
+  - NodeJs
+  - **yarn** or **npm**
+
+Clone the repository
 ```
 git clone https://github.com/doneber/CD-excercises/
 ```
@@ -18,7 +34,7 @@ Run the app
 ```
 yarn start
 ```
-## Others
+## Other commands
 Build
 ```
 yarn run build
