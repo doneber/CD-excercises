@@ -1,10 +1,25 @@
 pipeline {
     agent any
 
+    tools 'NodeJs15'
+    options {
+        timeout(time: 3, unit: 'MINUTES')
+    }
+
     stages {
-        stage('Hello') {
+        stage('Install dependencies') {
             steps {
-                echo 'Hello World'
+                cd ExpressTs && npm install && npx webpack
+            }
+        }
+        stage('Build dist') {
+            steps {
+                cd ExpressTs && npx webpack
+            }
+        }
+        stage('Run tests') {
+            steps {
+                cd ExpressTs && npm test
             }
         }
     }
