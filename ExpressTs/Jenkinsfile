@@ -1,7 +1,9 @@
 pipeline {
     agent any
 
-    tools 'NodeJs15'
+    tools{
+        nodejs 'NodeJs15'
+    }
     options {
         timeout(time: 3, unit: 'MINUTES')
     }
@@ -9,17 +11,17 @@ pipeline {
     stages {
         stage('Install dependencies') {
             steps {
-                cd ExpressTs && npm install && npx webpack
+                sh 'cd ExpressTs && npm install && npx webpack'
             }
         }
         stage('Build dist') {
             steps {
-                cd ExpressTs && npx webpack
+                sh 'cd ExpressTs && npx webpack'
             }
         }
         stage('Run tests') {
             steps {
-                cd ExpressTs && npm test
+                sh 'cd ExpressTs && npm test'
             }
         }
     }
